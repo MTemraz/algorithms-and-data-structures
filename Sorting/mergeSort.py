@@ -22,8 +22,3 @@ def mS(L):
             result.extend(b[ib:])
             break
     return result
-
-if __name__ == '__main__':
-    L = [10,4,2,-3,0,-1]
-    print L
-    print mS(L)
