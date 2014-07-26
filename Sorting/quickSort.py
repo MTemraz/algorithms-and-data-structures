@@ -17,9 +17,3 @@ def partition(L,start,end):
             L[less],L[i]=L[i],L[less]
     L[less+1],L[end] = L[end],L[less+1]
     return less+1
-
-if __name__ == '__main__':
-    L = [10,-2,3,1,0,4,2]
-    print L
-    qS(L,0,len(L)-1)
-    print L
