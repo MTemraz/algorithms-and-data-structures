@@ -91,7 +91,7 @@ def _insert(root,v):
             root.left = Node(v)
         else:
             _insert(root.left,v)
-
+            
 if __name__ == '__main__':
     tree = BST()
     tree.insert(7)

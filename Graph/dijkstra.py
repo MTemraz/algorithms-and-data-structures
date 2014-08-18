@@ -42,7 +42,7 @@ def find_index(L,element):
         
 def percolate_up(L,i):
     parent = i-1 // 2
-    if i >= 0 and L[parent] > L[i]:
+    if parent >= 0 and L[parent] > L[i]:
         L[i],L[parent] = L[parent],L[i]
         percolate_up(L,parent)
 
