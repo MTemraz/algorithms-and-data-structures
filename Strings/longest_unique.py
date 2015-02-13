@@ -12,5 +12,5 @@ def longestUnique(string):
             maxLen = max(currLen,maxLen)
         else:
             prev = cache[string[i]]+1
-            cache = {}
+            cache[string[i]] = i
     return maxLen
