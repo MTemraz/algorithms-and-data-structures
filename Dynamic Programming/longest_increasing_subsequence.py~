@@ -1,0 +1,5 @@
+# Question: Given a array A[1..n], calculate B[1..m] with B[i]<B[i+1] where i=1,2,3,.…,m such that m is maximum.
+
+def longestIncSubsequence(array):
+    # array = [1,12,7,0,23,11,52,31,61,69,70,2]
+    pass

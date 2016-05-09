@@ -1,0 +1,4 @@
+# Question: Write code to search for an element in a sorted unknown length array.
+
+def searchUnknown(array):
+    pass

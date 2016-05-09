@@ -1,0 +1,4 @@
+# Question: Write code to check if a tree is balanced.
+
+def isBalanced(root):
+    pass

@@ -1,0 +1,28 @@
+from bst import *
+
+def isBalanced(root):
+    if not root:
+        return 0
+    leftHeight = getHeight(root.left)
+    rightHeight = getHeight(root.right)
+    diff = abs(leftHeight-rightHeight)
+    if diff > 1:
+        return False
+    return max(leftHeight,rightHeight)+1
+
+
+if __name__ == '__main__':
+    tree = BST()
+    tree.insert(7)
+    tree.insert(4)
+    tree.insert(5)
+    tree.insert(6)
+    tree.insert(12)
+    tree.insert(9)
+    tree.insert(13)
+    tree.insert(10)
+    tree.insert(11)
+    tree.insert(15)
+    tree.print_tree()
+    tree.delete(7)
+    tree.print_tree()

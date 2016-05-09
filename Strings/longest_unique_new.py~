@@ -1,0 +1,16 @@
+
+def longestUnique(string):
+    # string = 'mohamed'
+    start = 0
+    currLen = 1
+    maxLen = 1
+    cache = {string[i]:True}
+    for i in range(len(string)):
+        if string[i] in cache:
+            start = cache[i]+1
+            cache[string[i]] = i
+        else:
+            currLen = i-start+1
+            maxLen = max(currLen,maxLen)
+        cache[string[i]] = i
+            

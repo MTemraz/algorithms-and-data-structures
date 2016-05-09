@@ -1,0 +1,7 @@
+class Vertex:
+    def __init__(self,id):
+        self.id = id
+        self.connectedTo = {}
+
+    def addNeighbour(self,key,weight):
+        self.conectedTo[key] = weight

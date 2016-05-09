@@ -1,0 +1,4 @@
+# Question: Write code to check if 2 binary trees are identical given their array representations.
+
+def identicalTrees(array1, array2):
+    pass

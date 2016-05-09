@@ -1,0 +1,3 @@
+
+def lcs(X,Y):
+    DP = [[0]*(len(X)+1) for i in xrange(len(Y)+1)]

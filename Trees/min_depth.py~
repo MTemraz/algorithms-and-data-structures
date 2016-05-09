@@ -1,0 +1,11 @@
+# Question: Write code to find the minimum depth of a binary tree.
+
+def minDepth(root,level=0,shortest=[1000]):
+    if not root:
+        return
+    level += 1
+    if not root.left and not root.right:
+        if level < shortest[0]:
+            shortest[0] = level
+    minDepth(root.left,level,shortest)
+    minDepth(root.right,level,shortest)

@@ -1,0 +1,10 @@
+def iterativePostorder1(root):
+    stack = list()
+    while len(stack) > 0 or root:
+        if root.left:
+            stack.append(root.left)
+            root =
+            
+
+def iterativePostorder2(root):
+    pass

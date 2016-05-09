@@ -1,0 +1,4 @@
+# Question: write code to find the next node (inorder successor) in a BST.
+
+def inorderSuccessor(root):
+    pass

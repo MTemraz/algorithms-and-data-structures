@@ -1,0 +1,12 @@
+# Question: Write code to find the kth smallest element in a BST.
+
+counter = 0
+def kSmallest(root, k):
+    if not root:
+        return
+    kSmallest(root.left)
+    global counter
+    counter += 1
+    if counter == k:
+        return root.data
+    kSmallest(root.right)

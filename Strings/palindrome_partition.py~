@@ -1,0 +1,12 @@
+
+def isPalin(string):
+    n = len(string)
+    cache = [[0]*n for _ in range(n)]
+    for i in range(n):
+        cache[i][i] = True
+    for l in range(2,n+1):
+        for i in range(n-l):
+            j = i+l-1
+            if string[i] == string[j]:
+                cache[i][j] = True
+            

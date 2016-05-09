@@ -1,0 +1,13 @@
+# Question: Given coins of certain denominations and a total, how many minimum coins would you need to make this total.
+#
+# Example:
+#   Input: [1,5,6,8], 11
+#   Output: 2 [5,6]
+
+def minCoins(coins, total):
+    cache = [0] * (total+1)
+    for i in range(len(coins)):
+        for j in range(1,len(cache)):
+            if coins[i] >= j:
+                cache[j] = max(cache[j], 1+cache[j-coins[i]])
+    return cache[-1]

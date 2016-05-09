@@ -1,0 +1,9 @@
+# Question: Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+
+def allPathsDFS(root, k, path = [], result = []):
+    if not root:
+        return
+    if root.data == k and root.left is None and root.right is None:
+        result.append(path)
+    if root.left:
+        allPathsDFS(root.left, k-root.left.data, path+[root.left.data], result)

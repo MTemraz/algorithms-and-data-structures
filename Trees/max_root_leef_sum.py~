@@ -1,0 +1,10 @@
+# Question: Find the maximum sum leaf to root path in a Binary Tree. Means in all the paths from root to leaves, find the path which has the maximum sum
+def maxPathSum(root, curr_sum=0, max_sum=-1, path=[]):
+    if not root:
+        return
+    curr_sum += root.data
+    path.append(root.data)
+    if not root.left and not root.right:
+        max_sum = max(curr_sum, max_sum)
+        max_path = curr_path
+    return max_sum, max_path

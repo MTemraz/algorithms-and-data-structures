@@ -1,0 +1,7 @@
+# Question: Write code to find the maximum sum between any two leaves in a tree
+
+def maxLeafToLeafSum(root):
+    if not root:
+        return 0
+    
+    

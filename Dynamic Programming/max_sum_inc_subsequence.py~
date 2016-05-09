@@ -1,0 +1,19 @@
+# Question: Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array such that the intgers in the subsequence are sorted in increasing order.
+
+# Example:
+#    Input: [1, 101, 2, 3, 100, 4, 5]
+#    Output: 106, formed by [1 + 2 + 3 + 100]
+#
+#    Input: [3, 4, 5, 10]
+#    Output: 22, formed by [3 + 4 + 5 + 10]
+#
+#    Input: [10, 5, 4, 3]
+#    Output: 10, formed by [10]
+
+def maxSumIncSubsequence(array):
+    cache = array
+    for i in range(len(array)):
+        for j in range(i):
+            if array[i] > array[j]:
+                cache[i] = max(cache[i], cache[j]+array[i])
+    

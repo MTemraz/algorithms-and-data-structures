@@ -1,16 +1,25 @@
 # Write code to find the longest string unique characters
 
+
 def longestUnique(string):
-    cache = {string[0]:0}
-    currLen = 1
-    maxLen = 1
-    prev = 0
-    for i in range(1,len(string)):
+    start = 0
+    temp_start = 0
+    end = 0
+    max_len = 0
+    curr_len = 0
+    cache = {}
+    for i in range(len(string)):
         if string[i] not in cache:
-            cache[string[i]] = i
-            currLen = i - prev+1
-            maxLen = max(currLen,maxLen)
+            curr_len = i - temp_start + 1
+            if curr_len > max_len:
+                max_len = curr_len
+                start = temp_start
+                end = i
         else:
-            prev = cache[string[i]]+1
-            cache = {}
-    return maxLen
+            while string[temp_start] != string[i]:
+                del cache[string[temp_start]]
+                temp_start += 1
+            temp_start += 1
+        cache[string[i]] = i
+    return max_len,string[start:end+1]
+

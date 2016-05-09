@@ -1,0 +1,8 @@
+# Question: Given coins of certain denominations and a total, how many ways these coins can be combined to get the total.
+#
+# Example:
+#   Input: [1,2,3], 5
+#   Output: 5
+
+def numberWays(coins, total):
+    pass

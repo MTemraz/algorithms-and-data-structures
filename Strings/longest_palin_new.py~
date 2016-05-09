@@ -1,0 +1,14 @@
+def longestPalin(string):
+    start = 0
+    end = 0
+    for i in range(len(string)):
+        left = i
+        right = i
+        while left >= 0 and right < len(string):
+            if string[left] == string[right]:
+                if right-left > end-start:
+                    start = left
+                    end = right
+            left -= 1
+            right += 1
+    return string[left:right+1],right-left+1

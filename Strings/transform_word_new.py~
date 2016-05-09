@@ -1,0 +1,6 @@
+import string
+
+def createGraph(words):
+    letters = string.lowercase
+    for word in words:
+        
